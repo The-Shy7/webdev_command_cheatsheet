@@ -16,21 +16,30 @@ let hi = 'hello' // string
 let num = 10 // number
 let bool = true // boolean
 
-// compound types (you can mix-and-match types)
-let arr = [1,2,3,'hi'] // array
-arr[3] // equals 'hi'
+// ARRAYS
+let array = [1, 2, 3, "hi"] // square brackets = "array"
+// access the items with square brackets
+array[0] // 1
+array[3] // "hi"
 
-let obj = { // object 
+// arrays have some special functions:
+// .map iterates through the array
+array.map((item,index)=> console.log(item,index))
+// .filter returns a NEW array filtered by the condition
+const newArray = array.filter((item,index)=> item>2) // [3]
+// .sort 
+array.sort((a,b)=> a-b)
+// push a new item into the array:
+array.push(4) // [1, 2, 3, "hi", 4]
+
+// OBJECTS
+var o = {
     hi: 'hello',
-    n: 1001,
-    b: false,
-    funky: function(){
-        // you can even put functions inside
-    }
+    number: 22,
 }
-obj.funky() // will run the funky function
-obj.n // equals 1001
-obj['n'] // ALSO equals 1001 !!!
+// access the items with dot notation
+o.hi // hello
+o.number // 22
 
 // functions are also variables!
 var funky = function(){
